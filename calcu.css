@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: aquamarine;
+}
+.form{
+    display: flex;
+    width: 350px;
+    background: beige;
+    border-radius: 20px;
+    height: 350px;
+    
+}
+input[type="text"]{
+    height: 60px;
+    width: 200px;
+    margin-top: 40px;
+    border-radius: 1px;
+    border: 1px solid rgba(231, 227, 227, 0.459);
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 20px;
+
+}
+form.button{
+    width: 300px;
+    height: 400px;
+    margin: 10px 25px 0 25px;
+}
+input[type="button"]{
+    width: 58px;
+    height: 55px;
+    font-size: 22px;
+    border-radius: 3px;
+    
+}
+input[type="button"]:hover{
+    transition: .5s;
+    background: aquamarine;
+}
+    
+ @media (max-width: 980px){
+    
+    form{
+
+        width: 500px;
+        height: 700px;
+    
+    }
+    .form{
+       width: 600px;
+       height: 700px;
+      display:flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: stretch;
+      
+     
+    }
+    input{
+      font-size: 30px !important;
+    }
+    .login-form{
+      box-shadow: none;
+    }
+   .button{
+        width: 500px;
+        height: 1500px;
+        margin: 10px 25px 0 25px;}
+        input[type="button"]{
+            width: 100px;
+            height: 98px;
+            font-size: 22px;
+            border-radius: 3px;}
+            input[type="text"]{
+                height: 90px;
+                width: 300px;
+                margin-top: 40px;
+                border-radius: 1px;
+                border: 1px solid rgba(231, 227, 227, 0.459);
+                color: black;
+                font-size: 25px;
+                font-weight: bold;
+                text-align: right;
+                padding-right: 20px;
+            
+            }
+  }

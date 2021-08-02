@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        JavaScripts.Live
+    </title>
+</head>
+<body>
+
+    <p id="demo"></p>
+    <script>
+        /* let a,b,c;
+        a=5;
+        b=6;
+        c= a+b;
+        document.write('Jega in the building '+c)
+        document.getElementById("demo").innerHTML="<b>My first JavaScript </b>";
+        document.getElementById("demo").style.display=""
+        
+        let q=x*10;
+        alert(q)
+       
+document.write(Welcome) */
+window.alert('welcome')
+var a=5,b=10;
+var a=25;
+var d=a+b;
+document.write(d)
+if (d>a)
+{
+    document.write(' You are Old')
+}
+else if(d>b)
+{
+    document.write('you are still Old')
+}
+else{
+    document.write('you are still young')
+}
+/* var aProperty;
+document.write("Navigator Object Properties<br /> ");
+for (aProperty in navigator)
+{
+ document.write(aProperty);
+ document.write("<br />");
+}
+document.write ("Exiting from the loop!")
+function welcome(){
+    document.write("welcome")
+} */
+function Warn(){
+    alert('Error')
+    document.write("Error Message")
+}
+function getConfirmation(){
+    var ret=confirm("Do you Wish to continue? Yes or No")
+    if(ret==true){
+        document.write("Thank You")
+        return true
+    }
+    else{
+        document.write("BYE")
+        return false
+    }
+}
+function getValue()
+{
+    var getval=prompt("Enter your Name, here")
+document.write("Your name is "+getval)
+}
+
+function getValue1(){
+ var a,b,c;
+ a = void ( b = 5, c = 7 );
+ document.write('a = ' + a + ' b = ' + b +' c = ' + c );
+}
+function book(title,author){
+    this.title=title
+    this.author= author
+}
+var mybook= new book("Love","Jega")
+document.write("This book Title is "+mybook.title+" Written by "+mybook.author)
+var str=/jega/gi
+var strr=/(\w+)\s(\w+)/;
+var re="Jega is a boy, Jega finest"
+var st=re.replace(str,"Makinde")
+document.write(st)
+var stt=re.replace(strr,"$2,$1")
+document.write(stt)
+alert(re.blink())
+var d= new Date("october 22,1995 23:35:00")
+document.write("br"+ d.getUTCMinutes())
+
+var dt = new Date( "Aug 28, 2008 13:30:00" );
+ dt.setUTCMinutes( 65 );
+ document.write( dt );
+    </script>
+    <br>
+    <input type="button" value="Result" onclick="getValue1();" />
+        <input type="button" value="Click Me" onclick="getValue();" /> 
+        <input type="button" value="Click Me" onclick="window.print()" />
+    
+    <input type="button" value="Click Me" onclick="getConfirmation();" />
+    <input type="button" value="Click Me" onclick="Warn();" />
+    <input type="button" onclick="Welcome()" value="welcome" id="welcome"></br>
+</body>
+</html>
