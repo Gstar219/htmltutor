@@ -1,0 +1,188 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+    button {
+        user-select: none; 
+        font-size:23px; 
+        width:80px ; 
+        height: 70px; 
+        font-family:bold;
+        border-radius: 50%;
+        border-color: gray;
+    }
+    .ope{
+        background: rgb(96, 250, 199);
+    }
+    .num:focus {
+        background: lime;
+    }
+
+</style>
+</head>
+
+<body>
+<input id="txtBox" type="text" style="text-align: right;font-size:60px;width: 325px;height: 125px; font-family: bold;" />
+<br />
+<button onclick="Click(event)" class="ope">C</button>
+<button onclick="Click(event)" class="ope">delete</button>
+<button onclick="Click(event)" class="ope">+/-</button>
+<button onclick="Click(event)" class="ope">+</button>
+
+<br />
+
+<button onclick="Click(event)" class="num">1</button>
+<button onclick="Click(event)" class="num">2</button>
+<button onclick="Click(event)" class="num">3</button>
+<button onclick="Click(event)" class="ope">-</button>
+
+<br />
+
+<button onclick="Click(event)" class="num">4</button>
+<button onclick="Click(event)" class="num">5</button>
+<button onclick="Click(event)" class="num">6</button>
+<button onclick="Click(event)" class="ope">*</button>
+
+<br />
+
+<button onclick="Click(event)" class="num">7</button>
+<button onclick="Click(event)" class="num">8</button>
+<button onclick="Click(event)" class="num">9</button>
+<button onclick="Click(event)" class="ope">/</button>
+
+<br />
+
+<button onclick="Click(event)" class="num">0</button>
+<button onclick="Click(event)" id="ope">.</button>
+<button onclick="Click(event)" id="equalto" style="background: rgb(206, 37, 206);user-select: none;font-size:25px; width:160px ; height: 70px; font-family:bold;">=</button>
+
+<script>
+  var nums = document.getElementById("num");
+        var operator = document.getElementById("ope");
+        var textbox = document.getElementById("txtBox");
+        var counter = 0
+        var dotReset=true;
+        function Click(e) {
+            var but = e.target;
+            var maxamount = 9;
+            var dot = 1;
+
+            if (but.innerText != "=" && but.innerText != "delete") {
+                if (but.innerText != ".") {
+                    textbox.value += but.innerText;}
+                    if (but.innerText == "+" || but.innerText == "-" || but.innerText == "*" || but.innerText == "/"){
+                        dotReset=true;
+                    
+                }
+
+                if (but.innerText == "C") {
+                    textbox.value = "0";
+                    dotReset=true;
+                }
+                else if (textbox.value[0] == "." || textbox.value[0] == "0" || textbox.value[0] == "+" || textbox.value[0] == "-" || textbox.value[0] == "/" || textbox.value[0] == "*") {
+                    textbox.value = "";
+                    dotReset=true;
+                }
+                else if (textbox.value.length > maxamount) {
+                    textbox.value = textbox.value.substring(0, maxamount);
+                }
+                else if (textbox.value.includes == "+/-") {
+                    textbox.value*= -1;
+                }
+                if (but.innerText == ".") {
+
+                    if(dotReset){
+                        if (textbox.value != "") {
+                                textbox.value+="."
+                                dotReset=false;
+                            }
+                    }
+
+                    }
+            }
+            else {
+                textbox.value = eval(textbox.value)
+            }
+            if (but.innerText == "delete") {
+                textbox.value = textbox.value.substring(0, textbox.value.length - 1);
+            }
+            if (textbox.value == "NaN" || textbox.value == "undefine") {
+                textbox.value = ""
+            }
+
+        }
+</script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Calculator</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+  <main class="calculator">
+
+    <div class="top">
+
+      <span class="unit">deg</span>
+      <section class="screen">
+        <div class="input"></div>
+        <div class="result"></div>
+      </section>
+
+    </div>
+
+    <div class="bottom">
+
+      <section class="keys">
+
+        <div class="column">
+          <span data-key="7">7</span>
+          <span data-key="4">4</span>
+          <span data-key="1">1</span>
+          <span data-key=".">.</span>
+        </div>
+
+        <div class="column">
+          <span data-key="8">8</span>
+          <span data-key="5">5</span>
+          <span data-key="2">2</span>
+          <span data-key="0">0</span>
+        </div>
+
+        <div class="column">
+          <span data-key="9">9</span>
+          <span data-key="6">6</span>
+          <span data-key="3">3</span>
+          <span class="equals-to" data-key="=">=</span>
+        </div>
+      </section>
+
+      <section class="operators">
+        <span class="delete">del</span>
+        <span data-key="÷">÷</span>
+        <span data-key="x">x</span>
+        <span data-key="-">-</span>
+        <span data-key="+">+</span>
+      </section>
+
+    </div>
+
+  </main>
+
+  <span class="credit">View on <a href="https://github.com/ayoisaiah/javascript-calculator">Github</a></span>
+
+  <script src="main.js"></script>
+</body>
+</html>

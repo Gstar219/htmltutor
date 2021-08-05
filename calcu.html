@@ -5,12 +5,57 @@
     </title>
 </head>
 <link rel="stylesheet" href="calcu.css">
-<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="/caculator.js"></script>
 <body>
-<div>
+ <div>
    <h2 style="padding-bottom: 18px; color: blueviolet; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: bold;">Welcome to Jega's Calculator</h2> 
 </div>
-<div class="form">
+
+<!--  <div class="form">
+    <div data-previous-operand class="previous-operand"></div>
+    <div data-current-operand class="current-operand"></div>
+    <form action="" name="forms">
+        <div class="button">
+        <input type="text" id="display" class="display" name="display" value="0" readonly >
+          <button class="grid-item">C</button><br/> 
+    <input type="button" class="clear" id="CE" value="C" data-clear></br> -->
+         <!-- <button class="grid-item plus"value="+" >+</button>
+            <button class="grid-item minus" value="-" >-</button>
+            <button class="grid-item multiply" value="*" >*</button>
+            <button class="grid-item divide"value="/" >/</button><br/>
+            <button class="grid-item" value="1" >1</button>
+            <button class="grid-item" value="2" >2</button>
+            <button class="grid-item"value="3" >3</button>
+            <button class="grid-item equal" value="=" >=</button><br/>
+            <button class="grid-item"value="4" >4</button>
+            <button class="grid-item"value="5" >5</button>
+            <button class="grid-item"value="6" >6</button>
+            <button class="grid-item"value="." >.</button><br/>
+            <button class="grid-item" value="7" >7</button>
+            <button class="grid-item" value="8">8</button>
+            <button class="grid-item" value="9">9</button>
+            <button class="grid-item" value="0" >0</button>  -->
+       <!--      
+         <input type="button" class="number"   id="number" value="9" data-number >
+        <input type="button" class="number"   id="number" value="8" data-number >
+        <input type="button" class="number"   id="number" value="7"  data-number>
+        <input type="button" class="operator" id="operator" value="+"data-operation ></br>
+        <input type="button" class="number"   id="number" value="6" data-number >
+        <input type="button" class="number"   id="number" value="5" data-number >
+        <input type="button" class="number"   id="number" value="4"  data-number>
+        <input type="button" class="operator" id="operator" value="-" data-operation></br>
+        <input type="button" class="number"   id="number" value="3"  data-number>
+        <input type="button" class="number"   id="number" value="2" data-number>
+        <input type="button" class="number"   id="number" value="1" data-number >
+        <input type="button" class="operator" id="operator" value="*"data-operation></br>
+        <input type="button" class="number dot" id="dot" value="."  data-action="decimal">
+        <input type="button" class="number"   id="number" value="0"data-number >
+        <input type="button" class="operator" id="operator" value="/"data-operation >
+        <input type="button" class="equals"   id="equals" value="=" data-equal > -->
+    </div>
+           </form>
+</div> 
+  <!-- <div class="form">
     <form action="" name="forms">
 
     <input type="text" id="display" name="display" disabled>
@@ -28,13 +73,46 @@
         <input type="button" id="two" value="2" onclick ="document.forms.display.value+='2' ">
         <input type="button" id="one" value="1" onclick ="document.forms.display.value+='1' ">
         <input type="button" id="times" value="*"onclick ="document.forms.display.value+='*' " ></br>
-        <input type="button" id="dot" value="." onclick ="document.forms.display.value+='.' ">
+        <input type="button" id="dot" value="." onclick="document.forms.display.value+='.'">
         <input type="button" id="zero" value="0" onclick ="document.forms.display.value+='0' ">
         <input type="button" id="slash" value="/" onclick ="document.forms.display.value+='/' ">
         <input type="button" id="equals" value="=" onclick ="document.forms.display.value=eval(forms.display.value) " >
     </div>
-           </form>
-</div>
+           </form> -->
 
+           <table class = "calculator" >
+            <tr>
+            <td colspan = "3"> <input class = "display-box" type = "text" id = "result" disabled /> </td>
+            <!-- clearScreen() function clear all the values -->
+            <td> <input class = "button" type = "button" value = "C" onclick = "clearScreen()" style = "background-color: #fb0066;" /> </td>
+            </tr>
+            <tr>
+            <!-- display() function display the value of clicked button -->
+            <td> <input class = "button" type = "button" value = "1" onclick = "display('1')" /> </td>
+            <td> <input class = "button" type = "button" value = "2" onclick = "display('2')" /> </td>
+            <td> <input class = "button" type = "button" value = "3" onclick = "display('3')" /> </td>
+            <td> <input class = "button" type = "button" value = "/" onclick = "display('/')" /> </td>
+            </tr>
+            <tr>
+            <td> <input class = "button" type = "button" value = "4" onclick = "display('4')" /> </td>
+            <td> <input class = "button" type = "button" value = "5" onclick = "display('5')" /> </td>
+            <td> <input class = "button" type = "button" value = "6" onclick = "display('6')" /> </td>
+            <td> <input class = "button" type = "button" value = "-" onclick = "display('-')" /> </td>
+            </tr>
+            <tr>
+            <td> <input class = "button" type = "button" value = "7" onclick = "display('7')" /> </td>
+            <td> <input class = "button" type = "button" value = "8" onclick = "display('8')" /> </td>
+            <td> <input class = "button" type = "button" value = "9" onclick = "display('9')" /> </td>
+            <td> <input class = "button" type = "button" value = "+" onclick = "display('+')" /> </td>
+            </tr>
+            <tr>
+            <td> <input class = "button" type = "button" value = "." onclick = "display('.')" /> </td>
+            <td> <input class = "button" type = "button" value = "0" onclick = "display('0')" /> </td>
+            <!-- calculate() function evaluate the mathematical expression -->
+            <td> <input class = "button" type = "button" value = "=" onclick = "calculate()" style = "background-color: #fb0066;" /> </td>
+            <td> <input class = "button" type = "button" value = "*" onclick = "display('*')" /> </td>
+            </tr>
+            </table>
+            <script type="text/javascript" src="caculator.js"></script> 
 </body>
 </html>
