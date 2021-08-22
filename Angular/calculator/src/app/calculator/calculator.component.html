@@ -1,0 +1,38 @@
+
+
+ <div class="min-h-screen bg-black py-6 flex flex-col justify-center sm:py-7 text-white">
+  <div class="relative py-3 sm:max-w-xl sm:mx-auto bg-gray-400 ">
+        <div class=" "> 
+        <input type="text" class="w-full border border-gray-300 px-3 py-2 h-20  text-black text-right font-bold" value="{{input}}" disabled>  <br/>        
+                     </div>
+      <div class=" grid grid-cols-4">
+        <button class="  bg-gray-200 p-3 border hover:bg-yellow-100 border-black text-black " (click)="allClear   ()">AC</button>
+        <button class="  bg-gray-200 p-3 border hover:bg-yellow-100 border-black text-black " (click)="presskey('9')">9</button>  
+        <button class="  bg-gray-200 p-3 border hover:bg-yellow-100 border-black text-black " (click)="presskey('8')">8</button>
+        <button class="  bg-gray-200 p-3 border hover:bg-yellow-100 border-black text-black " (click)="presskey('/')">/</button>
+       </div>
+      <div class=" grid grid-cols-4 ">
+        <button class="  bg-gray-200 p-3 border hover:bg-yellow-100 border-black  text-black " (click)="presskey('7')">7</button>
+        <button class="  bg-gray-200 p-3 border hover:bg-yellow-100 border-black  text-black " (click)="presskey('6')">6</button>
+        <button class="  bg-gray-200 p-3 border hover:bg-yellow-100 border-black  text-black " (click)="presskey('5')">5</button>
+        <button class="  bg-gray-200 p-3 border hover:bg-yellow-100 border-black  text-black " (click)="presskey('*')">&times;</button>
+      </div>
+      <div class="grid grid-cols-4 ">
+        <button class="  bg-gray-200 p-3 border hover:bg-yellow-100 border-black text-black  " (click)="presskey('4')">4</button>
+        <button class="  bg-gray-200 p-3 border hover:bg-yellow-100 border-black text-black  " (click)="presskey('3')">3</button>
+        <button class="  bg-gray-200 p-3 border hover:bg-yellow-100 border-black text-black  " (click)="presskey('2')">2</button>
+        <button class="  bg-gray-200 p-3 border hover:bg-yellow-100 border-black text-black  " (click)="presskey('-')">&minus;</button>
+      </div>
+      <div class="grid grid-cols-4 ">
+        <button class="   bg-gray-200 p-3 border hover:bg-yellow-100  border-black text-black " (click)="presskey('1')">1</button>
+        <button class="   bg-gray-200 p-3 border hover:bg-yellow-100  border-black text-black " (click)="presskey('0')">0</button>
+        <button class="   bg-gray-200 p-3 border  hover:bg-yellow-100 border-black text-black " (click)="presskey('.')">&dot;</button>
+        <button class="   bg-gray-200 p-3 border hover:bg-yellow-100  border-black text-black " (click)="presskey('+')">+</button>
+       
+      </div>
+      <div class="grid">
+        <button class="  bg-gray-200 p-3 border hover:bg-yellow-100  border-black text-black" (click)="getAnswer()">&equals;</button>
+      </div>
+    </div >
+  </div>
+ 

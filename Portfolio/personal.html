@@ -48,6 +48,7 @@ border-radius: 25px;
         height: 400px;
       justify-content: center;
       align-items: center;
+      padding-left: 100px;
     }
     .dot{
         height: 218px;
@@ -102,13 +103,27 @@ text-align: center;
         color: white;
 margin-left: 100px;
     }
-    .col6{
-
-    }
-        
+   .Image{
+    width: 30em;
+  height: 26em;
+  position: fixed;
+  background: url("../Portfolio/jega.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  opacity: 100;
+    top: 0px;
+    overflow: hidden;
+    left: 43em;
+   }
+      .home-about{
+          display: flex;
+          justify-content: center;
+          padding-top: 10px;
+      } 
 </style>
 <body>
-    <div class="cantainer">
+    <div class="fluid-container">
 <nav class="nav" >
     <ul class="nav nav-items ">
         <li class="nav-items">
@@ -126,33 +141,42 @@ margin-left: 100px;
     </ul>
 </nav>
 <div class="row">
-<div class="col-6">
+<div class="col-6 ">
     <Span class="dot">
     <Span class="dot1"><h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif;margin-top: 60px;">HI</h1> </Span>
     </Span>
     
     <h3>Makinde Gbolahan Samuel</h3>
     <h5>Frontend/ UI/UX Designer</h5>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
 
 </div>
-<div class="col-6">
-    <img src="jega.png">
+<div class="col-6 co">
     <span class="dot2">
         <span class="dot4">
             
             <span class="dot3">
-           
+                <div class="Image">
+
+                </div> 
             </span>
         </span>
         
            </span>
+    
     </span>
     
-  
-<img src="" alt="">
-</div>
-</div>
+ 
 
+</div>
+</div>
+<div class="home-about">
+    <input type="button" class="abut" value="About me">
+</div>
 </div>
 
 </body>
